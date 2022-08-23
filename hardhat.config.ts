@@ -69,13 +69,16 @@ const userConfig: HardhatUserConfig = {
       { version: primarySolidityVersion, settings: soliditySettings },
       { version: "0.6.12" },
       { version: "0.5.17" },
-    ]
+    ],
   },
   networks: {
     hardhat: {
       allowUnlimitedContractSize: true,
       blockGasLimit: 100000000,
-      gas: 100000000
+      gas: 100000000,
+    },
+    custom: {
+      url: NODE_URL
     },
     mainnet: {
       ...sharedNetworkConfig,
